@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import SimpleSidebar from "./Components/Sidebar";
+import SimpleSidebar from "./Components/sidebar";
 
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 import {
