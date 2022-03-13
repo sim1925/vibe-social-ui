@@ -24,7 +24,6 @@ import {
 import { clusterApiUrl } from "@solana/web3.js";
 import React, { FC, ReactNode, useMemo } from "react";
 
-require("./App.css");
 require("@solana/wallet-adapter-react-ui/styles.css");
 
 function App() {
@@ -34,7 +33,6 @@ function App() {
                 <BrowserRouter>
                     <Routes>
                         <Route path="/" element={<SimpleSidebar />} />
-                        <Route path="/walletuse" element={<Content />} />
                     </Routes>
                 </BrowserRouter>
             </div>
