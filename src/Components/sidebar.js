@@ -28,13 +28,12 @@ import {
 import { Content } from "../App";
 
 const LinkItems = [
-    { name: "Home", icon: FiHome },
-    { name: "Trending", icon: FiTrendingUp },
-    { name: "Explore", icon: FiCompass },
-    { name: "Profile", icon: FiUser },
-    { name: "Settings", icon: FiSettings },
+    { name: "Home", icon: FiHome, url: "/" },
+    { name: "Trending", icon: FiTrendingUp, url: "/trending" },
+    { name: "Explore", icon: FiCompass, url: "/explore" },
+    { name: "Profile", icon: FiUser, url: "/profile" },
+    { name: "Settings", icon: FiSettings, url: "/settings" },
 ];
-
 
 const SimpleSidebar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -68,7 +67,6 @@ const SidebarContent = () => {
             bg={useColorModeValue("#11263E")}
             borderRight="1px"
             ml={5}
-            
             borderRadius={"10px"}
             w={{ base: "full", md: 72 }}
             h="97vh"
@@ -79,7 +77,7 @@ const SidebarContent = () => {
                 mx="8"
                 justifyContent="space-between"
             >
-             {/*<img src={"https://synthesize.s3.ap-south-1.amazonaws.com/images/Aces+Labs+(3).png"} />*/}
+                {/*<img src={"https://synthesize.s3.ap-south-1.amazonaws.com/images/Aces+Labs+(3).png"} />*/}
                 <Text
                     fontSize="2xl"
                     fontFamily="monospace"
@@ -94,7 +92,12 @@ const SidebarContent = () => {
                 />
             </Flex>
             {LinkItems.map((link) => (
-                <NavItem key={link.name} icon={link.icon} name={link.name} />
+                <NavItem
+                    key={link.name}
+                    icon={link.icon}
+                    name={link.name}
+                    url={link.url}
+                />
             ))}
             <Box mt={10} ml={5}>
                 <Content />

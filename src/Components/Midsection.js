@@ -1,5 +1,5 @@
-import React from 'react'
-import Vibe from './vibe'
+import React from "react";
+import Vibe from "./vibe";
 import {
     IconButton,
     Box,
@@ -17,16 +17,16 @@ import {
 } from "@chakra-ui/react";
 
 function Midsection() {
-  return (
-    <Box
+    return (
+        <Box
             bg={useColorModeValue("#11263E")}
             borderRight="1px"
             h="97vh"
-          
             borderRadius={"10px"}
-            
-        ><Vibe /></Box>
-  )
+        >
+            <Vibe />
+        </Box>
+    );
 }
 
-export default Midsection
+export default Midsection;

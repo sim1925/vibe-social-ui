@@ -25,17 +25,18 @@ import { clusterApiUrl } from "@solana/web3.js";
 import React, { FC, ReactNode, useMemo } from "react";
 import Dashboard from "./Pages/Dashboard";
 import { Box, useColorModeValue } from "@chakra-ui/react";
+import AccDetails from "./Pages/AccDetails";
 
 require("@solana/wallet-adapter-react-ui/styles.css");
 
 function App() {
     return (
         <Context>
-            <Box className="App"
-            bg={useColorModeValue("#11263E")}>
+            <Box className="App" bg={useColorModeValue("#11263E")}>
                 <BrowserRouter>
                     <Routes>
                         <Route path="/" element={<Dashboard />} />
+                        <Route path="/deets" element={<AccDetails />} />
                     </Routes>
                 </BrowserRouter>
             </Box>
