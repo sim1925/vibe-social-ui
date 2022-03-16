@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+
 import {
     IconButton,
     Box,
@@ -21,6 +22,7 @@ import {
     FiStar,
     FiSettings,
     FiMenu,
+    FiUser,
 } from "react-icons/fi";
 
 import { Content } from "../App";
@@ -29,9 +31,10 @@ const LinkItems = [
     { name: "Home", icon: FiHome },
     { name: "Trending", icon: FiTrendingUp },
     { name: "Explore", icon: FiCompass },
-    { name: "Favourites", icon: FiStar },
+    { name: "Profile", icon: FiUser },
     { name: "Settings", icon: FiSettings },
 ];
+
 
 const SimpleSidebar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -64,12 +67,11 @@ const SidebarContent = () => {
         <Box
             bg={useColorModeValue("#11263E")}
             borderRight="1px"
-            left={"15px"}
-            top={"15px"}
+            ml={5}
+            
             borderRadius={"10px"}
-            w={{ base: "full", md: 60 }}
-            pos="fixed"
-            h="96%"
+            w={{ base: "full", md: 72 }}
+            h="97vh"
         >
             <Flex
                 h="20"
@@ -77,6 +79,7 @@ const SidebarContent = () => {
                 mx="8"
                 justifyContent="space-between"
             >
+             {/*<img src={"https://synthesize.s3.ap-south-1.amazonaws.com/images/Aces+Labs+(3).png"} />*/}
                 <Text
                     fontSize="2xl"
                     fontFamily="monospace"

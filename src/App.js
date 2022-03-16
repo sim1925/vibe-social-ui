@@ -23,19 +23,22 @@ import {
 } from "@solana/wallet-adapter-wallets";
 import { clusterApiUrl } from "@solana/web3.js";
 import React, { FC, ReactNode, useMemo } from "react";
+import Dashboard from "./Pages/Dashboard";
+import { Box, useColorModeValue } from "@chakra-ui/react";
 
 require("@solana/wallet-adapter-react-ui/styles.css");
 
 function App() {
     return (
         <Context>
-            <div className="App">
+            <Box className="App"
+            bg={useColorModeValue("#11263E")}>
                 <BrowserRouter>
                     <Routes>
-                        <Route path="/" element={<SimpleSidebar />} />
+                        <Route path="/" element={<Dashboard />} />
                     </Routes>
                 </BrowserRouter>
-            </div>
+            </Box>
         </Context>
     );
 }
