@@ -32,7 +32,7 @@ const LinkItems = [
     { name: "Trending", icon: FiTrendingUp, url: "/trending" },
     { name: "Explore", icon: FiCompass, url: "/explore" },
     { name: "Profile", icon: FiUser, url: "/profile" },
-    { name: "Settings", icon: FiSettings, url: "/settings" },
+    { name: "Details", icon: FiSettings, url: "/deets" },
 ];
 
 const SimpleSidebar = () => {
@@ -106,10 +106,10 @@ const SidebarContent = () => {
     );
 };
 
-const NavItem = ({ icon, name }) => {
+const NavItem = ({ icon, name, url }) => {
     return (
         <Link
-            href="#"
+            href={url}
             style={{ textDecoration: "none" }}
             _focus={{ boxShadow: "none" }}
             color={"white"}
