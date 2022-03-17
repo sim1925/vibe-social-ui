@@ -1,6 +1,7 @@
-import { HStack, useColorModeValue } from "@chakra-ui/react";
+import { HStack, useColorModeValue, VStack } from "@chakra-ui/react";
 import React from "react";
-import Midsection from "../Components/Midsection";
+import ProfileBottom from "../Components/ProfileBottom";
+import ProfileMidsection from "../Components/ProfileMidsection";
 import SimpleSidebar from "../Components/sidebar";
 
 function Profile() {
@@ -11,7 +12,10 @@ function Profile() {
             bg={useColorModeValue("#0A131D")}
         >
             <SimpleSidebar />
-            <Midsection />
+            <VStack>
+                <ProfileMidsection />
+                <ProfileBottom />
+            </VStack>
         </HStack>
     );
 }

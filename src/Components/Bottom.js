@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
     IconButton,
     Box,
@@ -16,20 +16,15 @@ import {
 } from "@chakra-ui/react";
 
 function Bottom() {
-  return (
-    <Box
+    return (
+        <Box
             bg={useColorModeValue("#11263E")}
             borderRight="1px"
             h="76vh"
             marginTop={2}
-          
             borderRadius={"10px"}
-            >
-            
-        </Box>
-  )
+        ></Box>
+    );
 }
 
-
-
-export default Bottom
+export default Bottom;
