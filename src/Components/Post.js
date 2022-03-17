@@ -14,11 +14,21 @@ import {
   BoxProps,
   FlexProps,
   Spacer,
+  HStack,
 } from "@chakra-ui/react";
 import {
   FiHeart
+  
  
 } from "react-icons/fi";
+
+import {
+  FaRegComment
+  
+ 
+} from "react-icons/fa";
+
+
 import { icons } from "react-icons";
 
 export default function Post() {
@@ -59,12 +69,16 @@ export default function Post() {
           bg={useColorModeValue("black")}
           h="40px"
           borderBottomRadius={"10px"}
-          paddingLeft={"18px"}
+          paddingLeft={"630px"}
+          paddingTop={2}
           color={"white"}
           //   borderRadius={"10px"}
           //   border={"solid"}
         >
-          <button><FiHeart></FiHeart></button>
+          <HStack spacing={30}><button><FiHeart></FiHeart></button>
+          <button><FaRegComment></FaRegComment></button>
+          </HStack>
+
         </Box>
       </Box>
     </>

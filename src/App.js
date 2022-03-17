@@ -27,6 +27,7 @@ import Dashboard from "./Pages/Dashboard";
 import { Box, useColorModeValue } from "@chakra-ui/react";
 import AccDetails from "./Pages/AccDetails";
 import Profile from "./Pages/Profile";
+import Explore from "./Pages/Explore";
 
 require("@solana/wallet-adapter-react-ui/styles.css");
 
@@ -39,6 +40,7 @@ function App() {
                         <Route path="/" element={<Dashboard />} />
                         <Route path="/profile" element={<Profile />} />
                         <Route path="/deets" element={<AccDetails />} />
+                        <Route path="/explore" element={<Explore />} />
                     </Routes>
                 </BrowserRouter>
             </Box>

@@ -1,8 +1,10 @@
-import { HStack, useColorModeValue } from '@chakra-ui/react'
+import { HStack, useColorModeValue, VStack } from '@chakra-ui/react'
 import React from 'react'
 import Midsection from '../Components/Midsection'
 import Bottom from '../Components/Bottom'
 import SimpleSidebar from '../Components/sidebar'
+import Searchbar from '../Components/searchbar'
+import Rightpane from '../Components/rightpane'
 
 
 function Dashboard() {
@@ -13,11 +15,17 @@ function Dashboard() {
     alignItems={"start"}
     bg={useColorModeValue("#0A131D")}>
         <SimpleSidebar />
-        <div>
+        <VStack>
         <Midsection  />
         <Bottom />
-      
-        </div>
+      </VStack>
+        <VStack spacing={5}><Searchbar /> 
+       <Rightpane />
+        </VStack>
+
+
+        
+
 
         
         
