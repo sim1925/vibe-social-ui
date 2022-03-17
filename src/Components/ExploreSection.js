@@ -1,27 +1,13 @@
+import { Box, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
-import {
-  IconButton,
-  Box,
-  CloseButton,
-  Flex,
-  Icon,
-  useColorModeValue,
-  Link,
-  Drawer,
-  DrawerContent,
-  Text,
-  useDisclosure,
-  BoxProps,
-  FlexProps,
-} from "@chakra-ui/react";
 import Post from "./Post";
 
-function Bottom() {
+export default function ExploreSection() {
   return (
     <Box
       bg={useColorModeValue("#11263E")}
       borderRight="1px"
-      h="66vh"
+      h="97vh"
       maxW={"50vw"}
       marginTop={2}
       borderRadius={"10px"}
@@ -44,5 +30,3 @@ function Bottom() {
     </Box>
   );
 }
-
-export default Bottom;
