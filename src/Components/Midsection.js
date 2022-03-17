@@ -14,6 +14,7 @@ import {
     useDisclosure,
     BoxProps,
     FlexProps,
+    Button,
 } from "@chakra-ui/react";
 
 function Midsection() {
@@ -21,10 +22,14 @@ function Midsection() {
         <Box
             bg={useColorModeValue("#11263E")}
             borderRight="1px"
-            h="20vh"
+            h="30vh"
+            maxW="50vw"
             borderRadius={"10px"}
         >
             <Vibe />
+            <Button mx={6} mt={4} colorScheme="teal" size="md">
+                Post
+            </Button>
         </Box>
     );
 }

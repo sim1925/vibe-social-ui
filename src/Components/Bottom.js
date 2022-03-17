@@ -14,16 +14,24 @@ import {
     BoxProps,
     FlexProps,
 } from "@chakra-ui/react";
+import Post from "./Post";
 
 function Bottom() {
     return (
         <Box
             bg={useColorModeValue("#11263E")}
             borderRight="1px"
-            h="76vh"
+            h="66vh"
+            maxW={"50vw"}
             marginTop={2}
             borderRadius={"10px"}
-        ></Box>
+            overflow="scroll"
+        >
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+        </Box>
     );
 }
 
