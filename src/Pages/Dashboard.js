@@ -4,6 +4,7 @@ import Midsection from '../Components/Midsection'
 import Bottom from '../Components/Bottom'
 import SimpleSidebar from '../Components/sidebar'
 
+
 function Dashboard() {
   return (
     <HStack 
@@ -15,6 +16,7 @@ function Dashboard() {
         <div>
         <Midsection  />
         <Bottom />
+      
         </div>
 
         

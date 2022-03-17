@@ -27,7 +27,7 @@ function Midsection() {
             borderRadius={"10px"}
         >
             <Vibe />
-            <Button mx={6} mt={4} colorScheme="teal" size="md">
+            <Button ml={"660px"} mt={4} colorScheme="purple" size="md">
                 Post
             </Button>
         </Box>
