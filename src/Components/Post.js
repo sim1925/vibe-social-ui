@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   IconButton,
   Box,
@@ -16,22 +16,17 @@ import {
   Spacer,
   HStack,
 } from "@chakra-ui/react";
-import {
-  FiHeart
-  
- 
-} from "react-icons/fi";
+import { FiHeart } from "react-icons/fi";
 
-import {
-  FaRegComment
-  
- 
-} from "react-icons/fa";
-
+import { FaRegComment, FaHeart } from "react-icons/fa";
 
 import { icons } from "react-icons";
 
 export default function Post() {
+  const [like, setlike] = useState(false);
+  const handleLike = () => {
+    setlike((prev) => !prev);
+  };
   return (
     <>
       <Box minH="30vh" padding={"20px"} borderRadius={"10px"}>
@@ -75,10 +70,14 @@ export default function Post() {
           //   borderRadius={"10px"}
           //   border={"solid"}
         >
-          <HStack spacing={30}><button><FiHeart></FiHeart></button>
-          <button><FaRegComment></FaRegComment></button>
+          <HStack spacing={30}>
+            <button onClick={handleLike}>
+              {like ? <FaHeart color="red" /> : <FiHeart />}
+            </button>
+            <button>
+              <FaRegComment></FaRegComment>
+            </button>
           </HStack>
-
         </Box>
       </Box>
     </>
