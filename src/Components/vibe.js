@@ -20,12 +20,14 @@ function Vibe() {
     <Textarea
       value={vibetext}
       onChange={handleInputChange}
-      width={700}
+      width={700} 
+      
       mx={6}
       mt={4}
       placeholder="What's Happening?"
-      size='sm'
+      size='md'
       color={"white"}
+     
     />
   </Box
   
