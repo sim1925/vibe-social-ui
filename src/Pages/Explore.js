@@ -11,9 +11,13 @@ function Explore() {
   return (
     <HStack padding={2} alignItems={"start"} bg={useColorModeValue("#0A131D")}>
       <SimpleSidebar />
+
       <ExploreSection />
-      {/* <Searchbar />
-      <Rightpane /> */}
+
+      <VStack spacing={5}>
+        <Searchbar />
+        <Rightpane />
+      </VStack>
     </HStack>
   );
 }
